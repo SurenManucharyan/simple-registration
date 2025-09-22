@@ -1,0 +1,99 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h2 {
+  color: #ffffff;
+}
+
+.bigDiv {
+  width: 30%;
+  background-color: #3e89c3;
+  padding: 10px;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 60%;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: #6366f1;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #818cf8;
+}
+
+button:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+input {
+  display: block;
+  width: 80%;
+  margin: auto;
+  border-radius: 6px;
+  background-color: rgb(252, 246, 246);
+  padding: 6px 12px;
+  font-size: 16px;
+  color: #6366f1;
+  outline: 1px solid rgba(255, 255, 255, 0.1);
+  outline-offset: -1px;
+}
+
+input::placeholder {
+  color: #6b7280;
+}
+
+input:focus {
+  outline: 2px solid #6366f1;
+  outline-offset: -2px;
+}
+
+@media (max-width: 640px) {
+  input {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+.registeredDiv {
+  margin-top: 200px;
+  width: 30%;
+  padding: 10px;
+  background: linear-gradient(
+    132deg,
+    #000000,
+    #00ff00,
+    #0000ff,
+    #e60073,
+    #ff0000,
+    #ffffff
+  );
+  background-size: 200% 200%;
+  animation: BackgroundGradient 15s ease infinite;
+}
+
+@keyframes BackgroundGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

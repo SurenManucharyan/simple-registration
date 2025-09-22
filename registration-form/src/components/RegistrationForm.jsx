@@ -1,4 +1,3 @@
-import "tailwindcss";
 import React, { useState } from "react";
 
 function RegistrationForm() {
@@ -47,42 +46,34 @@ function RegistrationForm() {
       <div className="bigDiv">
         <h2>Registration Form</h2>
         <form onSubmit={handleRegister}>
-          <input
+          <Input
             type="text"
             name="username"
             placeholder="Username"
             value={formData.username}
             onChange={handleChange}
           />
-          <br />
-
-          <input
+          <Input
             type="email"
             name="email"
             placeholder="Email"
             value={formData.email}
             onChange={handleChange}
           />
-          <br />
-
-          <input
+          <Input
             type="password"
             name="password"
             placeholder="Password"
             value={formData.password}
             onChange={handleChange}
           />
-          <br />
-
-          <input
+          <Input
             type="password"
             name="repeatPassword"
             placeholder="Repeat Password"
             value={formData.repeatPassword}
             onChange={handleChange}
           />
-          <br />
-
           <button type="submit">Register</button>
         </form>
       </div>

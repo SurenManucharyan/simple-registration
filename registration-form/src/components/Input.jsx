@@ -1,13 +1,13 @@
 import React, { memo } from "react";
 
-const Input = memo(function Input({
+export const Input = memo(function Input({
   type,
   name,
   placeholder,
   value,
   onChange,
 }) {
-    
+
   return (
     <input
       type={type}

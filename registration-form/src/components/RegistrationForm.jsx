@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Input } from "../components/Input";
+import React, { useState , useCallback} from "react";
+import Input from "../components/Input";
 
 function RegistrationForm() {
   const [formData, setFormData] = useState({
@@ -11,12 +11,16 @@ function RegistrationForm() {
 
   const [registeredUser, setRegisteredUser] = useState(null);
 
-  function handleChange(e) {
-    let name = e.target.name;
-    let value = e.target.value;
+  const handleChange = useCallback((e) => {
+    const name = e.target.name;
+    const value = e.target.value;
 
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  }
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  }, []);
+  
 
   const handleRegister = (e) => {
     e.preventDefault();

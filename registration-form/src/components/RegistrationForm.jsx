@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Input } from "../components/Input";
 
 function RegistrationForm() {
   const [formData, setFormData] = useState({
